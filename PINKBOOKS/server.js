@@ -34,13 +34,33 @@ function upload_random_image(images){
         ]),
         media_ids: new Array(data.media_id_string)
       },
-        function(err, data, response) {
-          if (err){
-            console.log('ERROR:');
-            console.log(err);
-          }
-          else{
-            console.log('Posted an image!');
+              function(err, data, response) {
+
+              if (err){
+
+                console.log('ERROR:');
+
+                console.log(err);
+
+              }
+
+              else{
+
+                console.log('Posted an image! Now deleting...');
+
+                fs.unlink(image_path, function(err){
+
+                  if (err){
+
+                    console.log('ERROR: unable to delete image ' + image_path);
+
+                    console.log(err);
+
+                  }
+
+                  else{
+
+                    console.log('image ' + image_path + ' was deleted');
           }
         }
       );
