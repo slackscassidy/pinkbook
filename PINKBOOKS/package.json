@@ -1,0 +1,15 @@
+{
+  "name": "pinkbooks",
+  "version": "1.0.0",
+  "description": "pinkbook_bot",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "hannah",
+  "license": "ISC",
+  "dependencies": {
+    "twit": "^2.2.11"
+  }
+}
