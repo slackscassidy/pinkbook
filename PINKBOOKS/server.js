@@ -3,7 +3,12 @@ var Twit = require('twit')
 var fs = require('fs'),
     path = require('path'),
     Twit = require('twit'),
-    config = require(path.join(__dirname, 'config.js'));
+    config = {
+    consumer_key: process.env.CONSUMER_KEY,
+    consumer_secret: process.env.CONSUMER_SECRET,
+    access_token: process.env.ACCESS_TOKEN,
+    access_token_secret: process.env.ACCESS_TOKEN_SECRET
+};
 
 var T = new Twit(config);
 
@@ -81,7 +86,7 @@ fs.readdir(__dirname + '/images', function(err, files) {
 
     setInterval(function(){
       upload_random_image(images);
-    }, 43200000);
+    }, 30000);
 
 
   }
