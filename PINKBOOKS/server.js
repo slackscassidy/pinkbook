@@ -19,6 +19,7 @@ var firebaseconfig = {
   
 };
 firebase.initializeApp(firebaseconfig);
+var defaultDatabase = firebase.database();
 
 var T = new Twit(config);
 
