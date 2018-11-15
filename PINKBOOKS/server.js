@@ -18,7 +18,7 @@ var firebaseconfig = {
     storageBucket: "pinkbook-bc18e.appspot.com",
   
 };
-firebase.initializeApp(config);
+firebase.initializeApp(firebaseconfig);
 
 var T = new Twit(config);
 
