@@ -15,4 +15,15 @@
   "dependencies": {
     "twit": "^2.2.11"
   }
+$ npm install firebase --save
+var firebase = require("firebase");
+import firebase from "firebase";
+var config = {
+   apiKey: "AIzaSyBS3K6-YlpTn8BSnY8E8LYQclnWdk0Th6g",
+    authDomain: "pinkbook-bc18e.firebaseapp.com",
+    databaseURL: "https://pinkbook-bc18e.firebaseio.com",
+    storageBucket: "pinkbook-bc18e.appspot.com",
+  
+};
+firebase.initializeApp(config);
 }
