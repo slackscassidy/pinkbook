@@ -1,14 +1,24 @@
-var Twit = require('twit')
+
 
 var fs = require('fs'),
     path = require('path'),
     Twit = require('twit'),
-    config = {
+    firebase = require("firebase");
+
+var config = {
     consumer_key: process.env.CONSUMER_KEY,
     consumer_secret: process.env.CONSUMER_SECRET,
     access_token: process.env.ACCESS_TOKEN,
     access_token_secret: process.env.ACCESS_TOKEN_SECRET
 };
+var firebaseconfig = {
+   apiKey: "AIzaSyBS3K6-YlpTn8BSnY8E8LYQclnWdk0Th6g",
+    authDomain: "pinkbook-bc18e.firebaseapp.com",
+    databaseURL: "https://pinkbook-bc18e.firebaseio.com",
+    storageBucket: "pinkbook-bc18e.appspot.com",
+  
+};
+firebase.initializeApp(config);
 
 var T = new Twit(config);
 
